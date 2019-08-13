@@ -1,0 +1,29 @@
+
+
+.app {
+    ion-grid {
+      height: 100%;
+      display: flex;
+    }
+    .logo-section {
+      .logo {
+        
+      }
+    }
+    .home-text {
+      font-size: 20px;
+      color: var(--ion-color-secondary-contrast);
+    }
+    .get-start-btn {
+      color: rgb (0 145 255);
+    }
+  }  
+  
+
+  ion-input {
+    border-bottom: 1px solid var(--ion-color-light);
+  }
+  
+  ion-button {
+    text-transform: capitalize;
+  }

@@ -1,0 +1,24 @@
+<ion-content class="app" margin padding>
+    <ion-grid class="ion-align-items-center ion-justify-content-center">
+        <ion-row class="ion-text-center" margin-bottom>
+            <ion-col size="12" class="logo-section ion-text-center">
+                <img src="../../assets/icon/logo.png" class="logo" padding />
+            </ion-col>
+            <ion-col size="12" margin-top>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+            </ion-col>
+            <ion-col size="12" padding>
+                <ion-row margin-top justify-content-center>
+                    <ion-label color="light">Your personal fund request for</ion-label>
+                </ion-row>
+                <ion-row margin-top justify-content-center>
+                    <ion-label class="green"> RS.{{amount}} successfully placed</ion-label>
+                </ion-row>
+                <ion-row margin-top justify-content-center>
+                    <ion-label color="medium">You will get a notification once the fund request was approved</ion-label>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+        <ion-button margin-top expand="full" [routerLink]="['/home']" color="primary">Finished</ion-button>
+    </ion-grid>
+</ion-content>

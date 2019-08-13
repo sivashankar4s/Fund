@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+      <img src="../../assets/icon/logo.png" class="logo" padding />
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-row margin-top justify-content-center>
+      <ion-label color="light">Please mention the reason</ion-label>
+    </ion-row>
+    <ion-row margin-top justify-content-center>
+      <ion-label color="medium">Optional</ion-label>
+    </ion-row>
+    <ion-row margin-top justify-content-center>
+      <ion-text class="currency"></ion-text>
+      <ion-input text-center color="light" type="string"
+        [(ngModel)]="reason">
+      </ion-input>
+    </ion-row>
+      <ion-button margin-top expand="full" [routerLink]="['/account-page/', id, amount]" color="primary">Continue</ion-button>
+  </ion-content>

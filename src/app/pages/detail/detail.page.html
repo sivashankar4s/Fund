@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <img src="../../assets/icon/logo.png" class="logo" padding />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row margin-top justify-content-center>
+    <ion-label color="light">Enter the amount you need</ion-label>
+  </ion-row>
+  <ion-row margin-top justify-content-center>
+    <ion-label color="medium">From Rs.1000 - 5000</ion-label>
+  </ion-row>
+  <ion-row margin-top justify-content-center>
+    <ion-text class="currency"></ion-text>
+    <ion-input text-center color="light" ng-max="5000" ng-min="1000" type="number" (ionChange)='onChangeTime(amount)'
+      [(ngModel)]="amount">
+    </ion-input>
+  </ion-row>
+    <ion-button margin-top expand="full" [routerLink]="['/reason/', id, amount]" [disabled]="!isValid" color="primary">Continue</ion-button>
+</ion-content>

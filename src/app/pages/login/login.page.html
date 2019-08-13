@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <img src="../../assets/icon/logo.png" class="logo" padding />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item margin-bottom>
+    <ion-label color="light" position="stacked">Enter your Ideas2it Email Id</ion-label>
+    <ion-input color="light" type="email" (ionChange)='onChangeTime(username)' [(ngModel)]="username">
+    </ion-input>
+  </ion-item>
+  <ion-button padding margin-top expand="full" [routerLink]="['/home/detail/', id]" [disabled]="!id" class="" color="primary">Continue
+  </ion-button>
+</ion-content>

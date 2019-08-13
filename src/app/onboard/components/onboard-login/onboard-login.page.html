@@ -1,0 +1,61 @@
+<ion-progress-bar class="" [value]="progressValue"></ion-progress-bar>
+<ion-content *ngIf="progressValue === 0.33">
+  <ion-row class="my-3 app-align-center" padding>
+    <form [formGroup]="form" padding-right>
+      <ion-col size="12" class="logo-section">
+        <img src="../../assets/icon/logo.png" />
+      </ion-col>
+      <ion-col size="12">
+        <div class="text mt-4">Enter your Ideas2IT Email ID</div>
+        <ion-input type="email"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <div class="text mt-4">Create Password</div>
+        <ion-input type="password"></ion-input>
+      </ion-col>
+      <ion-col size="12" padding>
+        <ion-button color="primary" expand="block" [disabled]="!form.valid" (click)="loginForm()">Continue</ion-button>
+      </ion-col>
+    </form>
+  </ion-row>
+</ion-content>
+<ion-content *ngIf="progressValue === 0.66">
+  <ion-row class="my-3 app-align-center" padding>
+    <form [formGroup]="form" padding-right>
+      <ion-col size="12" class="logo-section">
+        <img src="../../assets/icon/logo.png" />
+      </ion-col>
+      <ion-col size="12">
+        <div class="text mt-4">Setup a 4 digit pin [for Security]</div>
+        <ion-input type="number"></ion-input>
+      </ion-col>
+      <ion-col size="12" padding>
+        <ion-button color="primary" expand="block" [disabled]="!form.valid" (click)="submitPin()">Continue</ion-button>
+      </ion-col>
+    </form>
+  </ion-row>
+</ion-content>
+<ion-content *ngIf="progressValue === 1">
+  <ion-row class="my-3 app-align-center" padding>
+    <ion-col size="12" class="logo-section">
+      <img src="../../assets/icon/logo.png" />
+    </ion-col>
+    <ion-col size="12" class="mt-3">
+      <div class="text">Enable biometric login
+        <span class="toogle">
+          <ion-toggle checked="true"></ion-toggle>
+        </span>
+      </div>
+    </ion-col>
+    <ion-col size="12" class="mt-3 mb-5">
+      <div class="text">Allow Push Notifications
+        <span class="toogle">
+          <ion-toggle checked="true"></ion-toggle>
+        </span>
+      </div>
+    </ion-col>
+    <ion-col size="12" padding class="mt-5">
+      <ion-button [routerLink]="['/landing-page']" color="primary" expand="block" [disabled]="!form.valid" (click)="finishOnboard()">Finish</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

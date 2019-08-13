@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="p-0">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="../../../assets/avatar.png">
+        </ion-avatar>
+        <ion-label>
+          <h3 class="label-name">Aravind Kumar
+            <!-- <ion-img class="dropdown" src="../../../assets/dropdown.png">
+              </ion-img> -->
+          </h3>
+          <p>emailid.com</p>
+        </ion-label>
+        <ion-thumbnail class="notification" slot="start">
+          <ion-img src="../../../assets/bell.png"></ion-img>
+        </ion-thumbnail>
+      </ion-item>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="app ion-align-items-center ion-justify-content-center">
+  <ion-card class="card my-1">
+    <ion-card-content>
+      <ion-row class="ion-text-center">
+        <ion-col size="12" class="ion-text-center offset-4">
+          <ion-img class="logo" src="../../../assets/icon/logo.png">
+          </ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-label class="label-name">
+            Select the type of fund you need
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row class="my-3">
+        <ion-col [routerLink]="['/personal-fund']" routerLinkActive="router-link-active"  class="box personal ion-align-items-center ion-justify-content-center" size="5">
+          <ion-row class="app-align-center">
+            <ion-col size="12" class="app-align-center">
+              <ion-img class="fund-img" src="../../../assets/avatar.png">
+              </ion-img>
+            </ion-col>
+            <ion-label class="label-name">
+              Personal
+            </ion-label>
+          </ion-row>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+        <ion-col [routerLink]="['/emergency-fund']" size="5" class="box emergency ion-align-items-center ion-justify-content-center">
+          <ion-row class="app-align-center">
+            <ion-col size="12" class="app-align-center">
+              <ion-img class="fund-img" src="../../../assets/emergency.png">
+              </ion-img>
+            </ion-col>
+            <ion-label class="label-name">
+              Emergency
+            </ion-label>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-label class="info">
+        Personal fund can be taken from 10th - 25th of a month
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+  <ion-label class="label-name ml-2">
+    Status
+  </ion-label>
+  <ion-card class="card my-1">
+    <ion-card-content>
+      There are no active fund requests
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

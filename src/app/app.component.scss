@@ -6,4 +6,7 @@
 // and used throughout the application.
 ion-app {
   --ion-background-color: #000;
+  .main-content {
+    background-color: #000;
+  }
 }

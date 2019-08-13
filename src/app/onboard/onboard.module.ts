@@ -1,14 +1,14 @@
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { TabsPageRoutingModule } from './onboard.router.module';
 
 import { OnboardPage } from './onboard.page';
+import { BrowserModule } from '@angular/platform-browser';
 
 
-import { LoginPageModule } from '../login/login.module';
 
 @NgModule({
   imports: [
@@ -16,8 +16,9 @@ import { LoginPageModule } from '../login/login.module';
     CommonModule,
     FormsModule,
     TabsPageRoutingModule,
-    LoginPageModule
+    ReactiveFormsModule
   ],
-  declarations: [OnboardPage]
+  declarations: [
+    OnboardPage]
 })
 export class OnboardPageModule {}

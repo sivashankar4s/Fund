@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-progress-bar [value]="progressValue">
+  </ion-progress-bar>
+  <ion-toolbar>
+    <img src="../../assets/icon/logo.png" class="logo" padding />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding *ngIf="progressValue === 0.25" >
+  <ion-row margin-top justify-content-center>
+    <ion-label color="light">Enter the amount you need</ion-label>
+  </ion-row>
+  <ion-row margin-top justify-content-center>
+    <ion-label color="medium">From Rs.1000 - 5000</ion-label>
+  </ion-row>
+  <ion-row margin-top justify-content-center>
+    <ion-text class="currency"></ion-text>
+    <ion-input text-center color="light" ng-max="5000" ng-min="1000" type="number" (ionChange)='onChangeTime(amount)'
+      [(ngModel)]="amount">
+    </ion-input>
+  </ion-row>
+    <ion-button margin-top expand="full" (click)="progressValue = 0.5" [disabled]="!isValid" color="primary">Continue</ion-button>
+</ion-content>
+
+<ion-content padding *ngIf="progressValue === 0.5" >
+    <ion-row margin-top justify-content-center>
+        <ion-label color="light">Please mention the reason</ion-label>
+      </ion-row>
+      <ion-row margin-top justify-content-center>
+        <ion-label color="medium">Optional</ion-label>
+      </ion-row>
+      <ion-row margin-top justify-content-center>
+        <ion-text class="currency"></ion-text>
+        <ion-input text-center color="light" type="string"
+          [(ngModel)]="reason">
+        </ion-input>
+      </ion-row>
+        <ion-button margin-top expand="full" (click)="progressValue = 0.75" color="primary">Continue</ion-button>
+</ion-content>
+
+<ion-content class="app" margin padding *ngIf="progressValue === 0.75" >
+        <ion-grid class="ion-align-items-center ion-justify-content-center">
+            <ion-row class="ion-text-center" margin-bottom>
+                <ion-col size="12" class="logo-section ion-text-center">
+                    <img src="../../assets/icon/logo.png" class="logo" padding />
+                </ion-col>
+                <ion-col size="12" padding>
+                    <ion-row margin-top justify-content-center>
+                        <ion-label color="light">Where should we send Rs.{{amount}}</ion-label>
+                    </ion-row>
+                    <ion-row margin-top justify-content-center>
+                        <ion-label color="medium">Select one of these methods</ion-label>
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+            <ion-row margin-top justify-content-center>
+                <ion-label class="green"> {{name}}</ion-label>
+            </ion-row>
+            <ion-row margin-top justify-content-center>
+                <ion-label color="light"> {{account}}</ion-label>
+            </ion-row>
+            <ion-button margin-top expand="full" (click)="progressValue = 1"  color="primary">Send to my salary account</ion-button>
+            <!-- <ion-button margin-top color="light" expand="full" fill="outline" [routerLink]="['/account/', id, amount]"  color="primary">Choose other account or UPI</ion-button> -->
+        </ion-grid>
+    </ion-content>
+
+    <ion-content class="app" margin padding *ngIf="progressValue === 1" >
+        <ion-grid class="ion-align-items-center ion-justify-content-center">
+            <ion-row class="ion-text-center" margin-bottom>
+                <!-- <ion-col size="12" class="logo-section ion-text-center">
+                    <img src="../../assets/icon/logo.png" class="logo" padding />
+                </ion-col> -->
+                <ion-col size="12" margin-top>
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                </ion-col>
+                <ion-col size="12" padding>
+                    <ion-row margin-top justify-content-center>
+                        <ion-label color="light">Your personal fund request for</ion-label>
+                    </ion-row>
+                    <ion-row margin-top justify-content-center>
+                        <ion-label class="green"> RS.{{amount}} successfully placed</ion-label>
+                    </ion-row>
+                    <ion-row margin-top justify-content-center>
+                        <ion-label color="medium">You will get a notification once the fund request was approved</ion-label>
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+            <ion-button margin-top expand="full" [routerLink]="['/home']" color="primary">Finished</ion-button>
+        </ion-grid>
+</ion-content>

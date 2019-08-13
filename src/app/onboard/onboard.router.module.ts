@@ -8,11 +8,6 @@ const routes: Routes = [
     component: OnboardPage,
     children: [
       {
-        path: '/login',
-        loadChildren: () =>
-          import('../login/login.module').then(m => m.LoginPageModule)
-      },
-      {
         path: '',
         redirectTo: '/onboard',
         pathMatch: 'full'

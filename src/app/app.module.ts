@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AccordionComponent } from './modules/accordion/accordian.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   providers: [
     StatusBar,
     SplashScreen,
+    AccordionComponent,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

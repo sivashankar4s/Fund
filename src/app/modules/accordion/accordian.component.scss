@@ -1,0 +1,27 @@
+accordion {
+    .card-header{
+        background-color: red;
+        color: #fff;
+    }
+    .card-content {
+        padding: 0px 0px; 
+        max-height: 0px;
+    }
+}
+ion-list {
+    padding: 0px;
+}
+ion-card {
+    margin: 0px;
+    border: 0px;
+}
+ion-card-content {
+    padding: 0px;
+}
+.title-text {
+    color: #ffffff !important;
+    text-align: center;
+}
+.card-info {
+    display: none;
+}

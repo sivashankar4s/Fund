@@ -67,10 +67,38 @@
   <ion-label class="label-name ml-2">
     Status
   </ion-label>
-  <ion-card class="card my-1">
-    <ion-card-content>
-      There are no active fund requests
-    </ion-card-content>
-
+  <ion-card>
+    <ion-grid>
+      <ion-row class="ion-justify-content-between" padding>
+        <ion-col size="4">
+            <div class="text-bold">₹3,000</div>
+            <div>PERSONAL</div>
+        </ion-col>
+        <ion-col size="8">
+            <div class="app-justify-end">10 July 2019</div>
+            <div class="app-align-items-center text-bold">
+              <ion-icon name="time">
+              </ion-icon>
+              Waiting for approval
+            </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <accordion title="Full Details">
+      <div class="card-color">
+        <div class="accordion-heading">
+          Reason
+        </div>
+        <div class="accordion-subtext">
+          To buy an online course
+        </div>
+        <div class="accordion-heading">
+          Your account details
+        </div>
+        <div class="accordion-subtext">
+          Salary Account - 3704  0044  0532  0130  00
+        </div>
+      </div>
+    </accordion>
   </ion-card>
 </ion-content>

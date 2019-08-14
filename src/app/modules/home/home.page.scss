@@ -46,3 +46,29 @@
   height: 35px;
   width: 35px;
 }
+ion-card {
+  --background: #F2CD5E;
+  --color: #303030;
+  border-radius: 0px;
+}
+ion-icon {
+  font-size: 25px;
+  margin-right: 2px;
+}
+.text-bold {
+  font-weight: 800;
+}
+.card-color {
+  color: white;
+  background-color: #303030;
+  border: 1px solid #303030;
+  border-radius: 0px;
+}
+.accordion-heading {
+  font-size: 18px;
+  padding: 5px;
+}
+.accordion-subtext {
+  font-size: 14px;
+  padding: 5px;
+}

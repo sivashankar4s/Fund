@@ -43,3 +43,12 @@ input {
   align-items: center;
   justify-content: center;
 }
+.app-align-items-center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.app-justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
